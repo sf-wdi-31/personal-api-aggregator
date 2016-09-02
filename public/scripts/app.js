@@ -41,13 +41,12 @@ function pingPersonalApi(route){
     url: route,
     dataType: 'json',
     success: onSuccess,
-    error: onError,
-    complete: onComplete
+    error: onError
   });
 }
 
 function onSuccess(data){
-  console.log(data);
+  console.log(data.name, data);
   profiles.push(data);
   var apiHtml = template({ profiles: profiles });
   $(".data-container").html(apiHtml);
@@ -55,8 +54,4 @@ function onSuccess(data){
 
 function onError(xhr, status, message){
   console.log(message);
-}
-
-function onComplete(){
-  console.log('AJAX request complete')
 }
