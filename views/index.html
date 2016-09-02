@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Blank</title>
+
+    <!-- STYLESHEETS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/styles/styles.css">
+
+    <!-- VENDOR SCRIPTS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+    <!-- APPLICATION SCRIPTS -->
+    <script src="/scripts/app.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-md-8 col-md-offset-2">
+          <h1>WDI 31's Personal APIs</h1>
+
+          <div class="data-container">
+            <script id="developer-data-template" type="text/x-handlebars-template">
+              {{#each profiles}}
+                <p>
+                  {{name}} <a href="{{personalSiteLink}}">Website</a> <a href="{{githubLink}}">GitHub</a>
+                </p>
+              {{/each}}
+            </script>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
